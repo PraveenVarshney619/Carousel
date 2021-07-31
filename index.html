@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Praveen's Project</title>
+    <style type="text/css">
+      *{
+        padding: 0;
+        margin: 0;
+    }
+    main{
+        width: 100%;
+        height: 400px;
+        margin: 200px auto;
+        overflow: hidden;
+        position: relative;
+    }
+    h1{
+        width: 90%;
+        margin: 10px auto;
+        background: #1967D2;
+        font-weight: bold;
+        color: white;
+    }
+    span{
+        position: absolute;
+        top: 40%;
+        font-size: 60px;
+        font-weight: bold;
+        color: purple;
+        cursor: pointer;
+        left: .5%;
+        z-index: 1;
+    }
+    span:nth-of-type(2){
+        Left: 98%;
+        text-align: right;
+    }
+    section{
+        width: 98%;
+        height: 300px;
+        background: #f4f4f4;
+        margin: 10px auto;
+        display: flex;
+        justify-content: left;
+        overflow-x: auto;
+    }
+    section::-webkit-scrollbar{
+        visibility: hidden;
+    }
+    div{
+        min-width: 330px;
+        height: 200px;
+        position: relative;
+        Left: 0;
+        text-align: center;
+        padding-top: 60px;
+        font-size: 100px;
+        font-weight: bold;
+        margin: 10px 20px;
+        color: white;
+        background: purple;
+        transition: 0.5s;
+    }
+
+    </style>
+  
+</head>
+<body>
+
+    <main>
+        <h1>Carousel</h1>
+        <span>&#139;</span>
+        <span>&#155;</span>
+        <section>
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+            <div>08</div>
+            <div>09</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </section>
+    </main>
+</body>
+</html>
+
+<script type="text/javascript">
+    var span = document.getElementsByTagName('span');
+    var div = document.getElementsByTagName('div');
+    var l = 0;
+    span[1].onclick = ()=>{
+        l++;
+        for(var i of div)
+        {
+            if (l==0) {i.style.left = "0px";}
+            if (l==1) {i.style.left = "-740px";}
+            if (l==2) {i.style.left = "-1480px";}
+            if (l==3) {i.style.left = "-2220px";}
+            if (l==4) {i.style.left = "-2960px";}
+            if (l>4) {l=4;}
+            }
+        }
+        span[0].onclick = ()=>{
+        l--;
+        for(var i of div)
+        {
+            if (l==0) {i.style.left = "0px";}
+            if (l==1) {i.style.left = "-740px";}
+            if (l==2) {i.style.left = "-1480px";}
+            if (l==3) {i.style.left = "-2220px";}
+            if (l<0) {l=0;}
+            }
+        }
+
+
+    
+</script>
